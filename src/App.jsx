@@ -108,7 +108,14 @@ export default function App() {
 
         <QuickAdd open={quickAdd} onClose={() => setQuickAdd(false)} data={data} onData={onData} theme={theme}/>
 
-        <BottomNav tab={tab} setTab={setTab} moreMenu={moreMenu} setMoreMenu={setMoreMenu} theme={theme} badges={badges}/>
+        <BottomNav
+          tab={tab}
+          setTab={setTab}
+          moreMenu={moreMenu}
+          setMoreMenu={setMoreMenu}
+          theme={theme}
+          navItems={profile.navItems || ["home", "calendar", "finance"]}
+        />
       </div>
     </>
   );
